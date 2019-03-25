@@ -1,5 +1,6 @@
 +++
 title="Contact"
+type="page"
 +++
 
 # Contact
