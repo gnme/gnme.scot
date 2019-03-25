@@ -1,0 +1,9 @@
+baseURL = "https://gnme.scot/"
+title = "Glasgow New Music Expedition"
+
+[permalinks]
+  pages = "/:slug"
+
+[params]
+  description = "The Glasgow New Music Expedition (GNME) is a group of brilliant young instrumentalists from Scotland, fiercely committed to performing new music by Scottish composers."
+  # googleAnalytics = "UA-"

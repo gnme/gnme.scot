@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+
+    {{ if eq .URL "/" }}
+    <title>{{ .Title }}</title>
+    <meta property='og:title' content="{{ .Title }}" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:title" content="{{ .Title }}" />
+    {{ else }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <meta property='og:title' content="{{ .Title }} | {{ .Site.Title }}" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+    {{ end }}
+
+    {{ if ne .Params.summary nil }}
+    <meta name="description" content="{{ .Params.summary }}" />
+    <meta name="twitter:description" content="{{ .Params.summary }}" />
+    {{ else }}
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    <meta name="twitter:description" content="{{ .Site.Params.description }}" />
+    {{ end }}
+    {{ if ne .Params.coverImage nil }}
+    <meta name="og:image" content="{{ printf "/img/%s" .Params.coverImage | absURL}}" />
+    <meta name="twitter:image" content="{{ printf "/img/%s" .Params.coverImage | absURL}}" />
+    {{ else }}
+    <meta name="og:image" content="{{ "/img/favicon.png" | absURL}}" />
+    <meta name="twitter:image" content="{{ "/img/favicon.png" | absURL}}" />
+    {{ end }}
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@music_expedition" />
+
+    {{ partial "analytics.html" . }}
+  </head>
+  <body>
+
+    <nav class="top-nav">
+      <div class="container d-flex justify-content-between">
+        <a class="navbar-brand" href="/">
+          <img src="/img/logo.png" />
+        </a>
+        <div class="links d-flex">
+          <a href="/">About</a>
+          <a href="/blog">News</a>
+          <a href="/members">Members</a>
+          <a href="/contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    {{ block "main" . }}
+    {{ end }}
+
+    <footer>
+      <p>
+        &copy {{ now.Format "2006" }} Glasgow New Music Expedition
+        <br/>
+        Registered Company No. 481327
+        <br/>
+        <a href="mailto:richard@gnme.scot">richard@gnme.scot</a>
+      </p>
+    </footer>
+  </body>
+</html>

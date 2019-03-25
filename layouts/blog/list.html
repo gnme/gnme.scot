@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="container">
+  <h1 class="section-header">
+    Blog
+  </h1>
+
+  {{ range .Data.Pages }}
+  {{ partial "post.html" . }}
+  {{ end }}
+</div>
+{{ end }}

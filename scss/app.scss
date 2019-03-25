@@ -1,0 +1,54 @@
+$primary: #FEF15B;
+$gnme-gray: #373739;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.top-nav {
+  margin-top: 20px;
+  .links {
+    padding: 30px;
+    a {
+      padding-left: 2em;
+    }
+    a:link, a:visited {
+      color: $body-color;
+    }
+    a:hover, a:active {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+  img {
+    height: 70px;
+  }
+
+  margin-bottom: 2em;
+}
+
+footer {
+  margin-top: 3em;
+  padding: 2em 0 1em;
+  font-size: $font-size-sm;
+  color: $gray-300;
+  background-color: $gnme-gray;
+  text-align: center;
+}
+
+.container img {
+  max-width: 100%;
+}
+
+img.logo {
+  height: 40px;
+  width: 40px;
+}
+
+article {
+  .meta {
+    font-size: .8em;
+    margin-bottom: 1em;
+  }
+  .body {
+
+  }
+}
