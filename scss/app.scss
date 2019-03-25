@@ -1,5 +1,9 @@
-$primary: #FEF15B;
+$primary: #7828FD;
+$secondary: #FEF15B;
 $gnme-gray: #373739;
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+$headings-font-family: 'Raleway', sans-serif;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -32,6 +36,13 @@ footer {
   color: $gray-300;
   background-color: $gnme-gray;
   text-align: center;
+
+  a {
+    color: $secondary;
+  }
+  a:hover, a:active {
+    color: $secondary;
+  }
 }
 
 .container img {

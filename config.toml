@@ -7,3 +7,16 @@ title = "Glasgow New Music Expedition"
 [params]
   description = "The Glasgow New Music Expedition (GNME) is a group of brilliant young instrumentalists from Scotland, fiercely committed to performing new music by Scottish composers."
   # googleAnalytics = "UA-"
+
+[related]
+threshold = 1
+includeNewer = true
+# lower case keywords in both queries and in the indexes
+toLower = true
+
+# [[related.indices]]
+# name = "tags"
+# weight = 100
+# [[related.indices]]
+# name  = "date"
+# weight = 50
