@@ -1,6 +1,6 @@
 +++
 title="Richard Greer"
-position="Founder"
+position="Artistic Director"
 type="members"
 +++
 
