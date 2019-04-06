@@ -5,8 +5,9 @@ type="page"
 
 # Contact
 
-If you have any queries about the ensemble, our programming or would like to get in touch please feel free to fill out our contact form.
-For non-solicited scores and proposals at all times please email [richard@gnme.scot](mailto:richard@gnme.scot).
+Please email [richard@gnme.scot](mailto:richard@gnme.scot) if you have any queries about the ensemble, our programming or would like to get in touch.
+
+Non-solicited scores and proposals are welcome at all times.
 
 ## Our Board Members
 
