@@ -1,0 +1,12 @@
+<h3>Latest News</h3>
+
+{{ range (where .Site.Pages.ByDate ".Params.date" "!=" nil).Reverse | first 3}}
+<div class="my-4">
+  <h5 class="news-title">
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+    </a>
+  </h5>
+  {{ partial "news-details.html" . }}
+</div>
+{{ end }}
