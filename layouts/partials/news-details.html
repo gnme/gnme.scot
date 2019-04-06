@@ -3,8 +3,8 @@
     Published {{.Date.Format "2 January 2006"}}
   </div>
   {{ if isset .Params "eventdate" }}
-  <span class="badge badge-primary">
+  <div class="event-date">
     Performance {{ (time .Params.eventdate).Format "2 January 2006"}}
-  </span>
+  </div>
   {{ end }}
 </div>

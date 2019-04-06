@@ -10,29 +10,29 @@
       {{ .Content }}
     </div>
 
-    <hr/>
-    <div class="text-center">
-      <img class="logo" src="/img/logo.png" />
-    </div>
   </article>
 
-  {{ $related := .Site.RegularPages.Related . | first 3 }}
-  {{ with $related }}
-  <h2 class="section-header">
-    Related news
-  </h2>
-  <div class="row mt-3">
-    {{ range . }}
-    <div class="col-md-4">
-      <h5>
-        <a href="/news/{{.Params.slug}}">
-          {{ .Title }}
-        </a>
-      </h5>
-      {{ partial "news-details.html" . }}
+  <div class="my-5">
+    {{ $related := .Site.RegularPages.Related . | first 3 }}
+    {{ with $related }}
+    <hr/>
+    <h2 class="section-header">
+      Related News
+    </h2>
+    <div class="row mt-3">
+      {{ range . }}
+      <div class="col-md-4">
+        <h5>
+          <a href="/news/{{.Params.slug}}">
+            {{ .Title }}
+          </a>
+        </h5>
+        {{ partial "news-details.html" . }}
+      </div>
+      {{ end }}
     </div>
     {{ end }}
   </div>
-  {{ end }}
+
 </div>
 {{ end }}
