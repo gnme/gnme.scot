@@ -14,6 +14,10 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('static/css'))
 });
 
+gulp.task('fonts', function () {
+  gulp.src('node_modules/font-awesome/fonts/*').pipe(gulp.dest('static/fonts'));
+})
+
 gulp.task('img', function () {
   var img = gulp.src('img/*');
 
@@ -31,8 +35,9 @@ gulp.task('img', function () {
 gulp.task('watch', function () {
   gulp.watch('scss/*.scss', ['sass']);
   gulp.watch('img/*', ['img']);
+  gulp.watch('fonts/*', ['fonts']);
 });
 
-gulp.task('develop', ['watch', 'sass', 'img']);
-gulp.task('build', ['sass', 'img']);
+gulp.task('develop', ['watch', 'sass', 'img', 'fonts']);
+gulp.task('build', ['sass', 'img', 'fonts']);
 gulp.task('default', ['develop']);

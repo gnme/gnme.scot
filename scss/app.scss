@@ -6,6 +6,8 @@ $gnme-gray: #373739;
 $headings-font-family: 'Raleway', sans-serif;
 
 @import "node_modules/bootstrap/scss/bootstrap";
+$fa-font-path: "../fonts";
+@import "node_modules/font-awesome/scss/font-awesome";
 
 .top-nav {
   margin-top: 20px;
