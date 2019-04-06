@@ -1,0 +1,10 @@
+<div class="news-details">
+  <div class="date">
+    Published {{.Date.Format "2 January 2006"}}
+  </div>
+  {{ if isset .Params "eventdate" }}
+  <span class="badge badge-primary">
+    Performance {{ (time .Params.eventdate).Format "2 January 2006"}}
+  </span>
+  {{ end }}
+</div>

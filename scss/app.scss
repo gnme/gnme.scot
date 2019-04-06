@@ -71,3 +71,20 @@ article {
 
   padding-bottom: 3em;
 }
+
+.news-title {
+  a {
+    color: $body-color;
+    &:hover {
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+}
+.news-details {
+  .date {
+    color: $gray-700;
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+}

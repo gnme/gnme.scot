@@ -4,11 +4,9 @@
     <h2>
       {{ .Title }}
     </h2>
-    <div class="meta text-primary">
-      Published {{ .Date.Format "Monday, January 2, 2006"}}
-    </div>
+    {{ partial "news-details.html" . }}
 
-    <div class="body">
+    <div class="body mt-4">
       {{ .Content }}
     </div>
 
@@ -23,9 +21,18 @@
   <h2 class="section-header">
     Related news
   </h2>
-  {{ range . }}
-  {{ partial "post.html" . }}
-  {{ end }}
+  <div class="row mt-3">
+    {{ range . }}
+    <div class="col-md-4">
+      <h5>
+        <a href="/news/{{.Params.slug}}">
+          {{ .Title }}
+        </a>
+      </h5>
+      {{ partial "news-details.html" . }}
+    </div>
+    {{ end }}
+  </div>
   {{ end }}
 </div>
 {{ end }}
