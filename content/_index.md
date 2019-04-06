@@ -10,25 +10,9 @@ Our repertoire consists entirely of new work.
 
 Our collaborators include the Glasgow School of Art, Royal Conservatoire of Scotland, the University of Glasgow, Glasgow Life, and the Scottish Music Centre.
 
-With:
-
-* Sarah Hayes (flute)
-* Jenny Stephenson (clarinet)
-* Chris McShane (bassoon)
-* Chris Gough (horn)
-* Tom Poulson (trumpet)
-* Antonio Jimenez Marin (trombone)
-* Ben Norris (violin)
-* Kay Stephen (viola)
-* Andrew Huggan (cello)
-* Daniel Griffin (double bass)
-* Glynn Forrest (percussion)
-* Sinae Lee (piano)
-
 Come and explore with us.
 
-
-## Generously supported by
+### Generously supported by
 
 * Hope Scott Trust
 * Jennie S. Gordon Memorial Trust
