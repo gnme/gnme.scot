@@ -5,6 +5,9 @@
   {{ if isset .Params "eventdate" }}
   <div class="event-date">
     Performance {{ (time .Params.eventdate).Format "2 January 2006"}}
+    {{ if isset .Params "eventvenue" }}
+    at {{ .Params.eventvenue}}
+    {{ end }}
   </div>
   {{ end }}
 </div>
