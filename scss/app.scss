@@ -10,11 +10,24 @@ $fa-font-path: "../fonts";
 @import "node_modules/font-awesome/scss/font-awesome";
 
 .top-nav {
-  margin-top: 20px;
+  max-width: 100%;
+  .logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 3px;
+
+    img {
+      height: 70px;
+      width: 70px;
+    }
+  }
   .links {
-    padding: 30px;
+    padding: 2em 0;
     a {
-      padding-left: 2em;
+      padding: 0;
+      padding-right: 1rem;
+      font-size: 0.9rem;
     }
     a:link, a:visited {
       color: $body-color;
@@ -24,11 +37,27 @@ $fa-font-path: "../fonts";
       text-decoration: none;
     }
   }
-  img {
-    height: 70px;
-  }
 
-  margin-bottom: 2em;
+  @include media-breakpoint-up(md) {
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .logo {
+      margin: 0;
+      display: inline-block;
+    }
+    margin-top: 20px;
+
+    .links {
+      a {
+        padding: 0;
+        padding-left: 2rem;
+      }
+    }
+
+    margin-bottom: 2em;
+  }
 }
 
 footer {
