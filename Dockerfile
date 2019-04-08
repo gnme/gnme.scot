@@ -1,7 +1,7 @@
 FROM node:alpine as build
 
 WORKDIR /build
-ENV HUGO_VERSION 0.41
+ENV HUGO_VERSION 0.54.0
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 RUN set -x && \
   apk add --update wget ca-certificates imagemagick && \
