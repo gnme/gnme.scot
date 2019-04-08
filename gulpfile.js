@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
 var imageResize = require('gulp-image-resize');
 
 function handleError (err) {
@@ -24,20 +23,23 @@ gulp.task('img', function () {
   img.pipe(imageResize({
     width: 400,
     imageMagick: true,
-  })).pipe(gulp.dest('static/img/thumbs'));
+  }))
+    .on('error', handleError)
+    .pipe(gulp.dest('static/img/thumbs'));
 
   img.pipe(imageResize({
     width: 1024,
     imageMagick: true,
-  })).pipe(gulp.dest('static/img'));
+  }))
+    .on('error', handleError)
+    .pipe(gulp.dest('static/img'));
 })
 
 gulp.task('watch', function () {
-  gulp.watch('scss/*.scss', ['sass']);
   gulp.watch('img/*', ['img']);
   gulp.watch('fonts/*', ['fonts']);
 });
 
-gulp.task('develop', ['watch', 'sass', 'img', 'fonts']);
-gulp.task('build', ['sass', 'img', 'fonts']);
+gulp.task('develop', ['watch', 'img', 'fonts']);
+gulp.task('build', ['img', 'fonts']);
 gulp.task('default', ['develop']);

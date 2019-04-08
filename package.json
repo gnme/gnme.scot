@@ -4,8 +4,7 @@
     "bootstrap": "^4.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
-    "gulp-image-resize": "^0.13.0",
-    "gulp-sass": "^4.0.1"
+    "gulp-image-resize": "^0.13.0"
   },
   "scripts": {
     "dev": "gulp",
