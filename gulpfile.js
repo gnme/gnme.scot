@@ -28,7 +28,7 @@ gulp.task('img', function () {
     .pipe(gulp.dest('static/img/thumbs'));
 
   img.pipe(imageResize({
-    width: 1024,
+    width: 1200,
     imageMagick: true,
   }))
     .on('error', handleError)
