@@ -49,6 +49,15 @@
         <div class="links">
           <a href="/">About</a>
           <a href="/news">News</a>
+          <div class="popup-container">
+            <a href="/what-we-do" class="popup-toggle dropdown-toggle" aria-haspopup="true" aria-expanded="false">What we do</a>
+            <div class="popup" style="display: none;">
+              <a href="/what-we-do#artistic-projects">Artistic projects</a>
+              <a href="/what-we-do#education">Education</a>
+              <a href="/what-we-do#recordings">Recordings</a>
+              <a href="/what-we-do#music-for-special-occasions">Music for special occasions</a>
+            </div>
+          </div>
           <a href="/members">Members</a>
           <a href="/contact">Contact</a>
           <a target="_blank" href="https://twitter.com/musicexpedition">
@@ -87,5 +96,29 @@
         <a href="mailto:richard@gnme.scot">richard@gnme.scot</a>
       </p>
     </footer>
+
+    <script
+      src="http://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"></script>
+    <script>
+     var popup = $('.popup');
+
+     function hideDropdown() {
+       popup.hide();
+       document.removeEventListener('click', hideDropdown);
+     }
+
+     $('.popup-toggle').click(function(e) {
+       e.preventDefault();
+       e.stopPropagation();
+       if (popup.is(':visible')) {
+         hideDropdown;
+       } else {
+         popup.show();
+         document.addEventListener('click', hideDropdown);
+       }
+     });
+    </script>
   </body>
 </html>
